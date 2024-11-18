@@ -1,6 +1,4 @@
 ATIVIDADE - Consultas no BD do Projeto (29/11)
-(Adilson Tavares da Rocha Junior, Giovana Naiara, Lucas de Mello Freitas, Otavio Henrique Torres, Viktor Jose Blasck, Vinicius Rodrigues Correia)
-
 
 /*1 - Selecione as denúncias realizadas este ano. Liste o nome do usuário, e-mail, instituição, motivo da denúncia, 
 descrição e data. Ordene das mais recentes para as mais antigas.*/
