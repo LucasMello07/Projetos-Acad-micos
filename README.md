@@ -8,7 +8,7 @@ O repositório inclui projetos diversos, como:
 - **Estruturas de Dados e Algoritmos:** Implementações clássicas e soluções computacionais.  
 - **Desenvolvimento Web:** Front-end, back-end e aplicações completas.  
 - **Banco de Dados:** Modelagem e sistemas de gestão de dados.   
-- **Gestão de Projetos:** Sistemas completos, como o Conecta+.  
+- **Gestão de Projetos:** Sistemas completos, como o **Conecta+**.  
 - **Interfaces Gráficas:** Aplicações desenvolvidas em LPOO com JavaFX.  
 - **Entre outros...** 
 
