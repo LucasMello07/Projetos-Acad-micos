@@ -14,7 +14,7 @@ O repositório inclui projetos diversos, como:
 
 ## 🎯 Para que Serve Este Repositório?  
 
-Este repositório é um espaço para compartilhar meu progresso e aprendizados com a comunidade. Ele pode ser útil para:  
+Este repositório é um espaço para compartilhar meu progresso e aprendizados. Ele pode ser útil para:  
 1. **Inspiração:** Explorar ideias para novos projetos.  
 2. **Aprendizado:** Estudar implementações práticas e técnicas.  
 3. **Colaboração:** Contribuir com melhorias ou discutir soluções.  
