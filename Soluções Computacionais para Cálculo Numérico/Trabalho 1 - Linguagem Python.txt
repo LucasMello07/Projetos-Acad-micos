@@ -1,0 +1,65 @@
+import sympy as sp
+
+
+x = sp.symbols('x')
+
+
+equation = x**3 - 7*x**2 + 14*x - 6
+
+
+# Função para o método da Bissecção (M.A.S)
+def bissecao(equation, a, b, precision):
+  iterations = 0
+  while (b - a) / 2 > precision:
+      midpoint = (a + b) / 2
+      if equation.subs(x, midpoint) == 0:
+          return midpoint, iterations
+      if equation.subs(x, a) * equation.subs(x, midpoint) < 0:
+          b = midpoint
+      else:
+          a = midpoint
+      iterations += 1
+  return (a + b) / 2, iterations
+
+# Função para o método de Newton
+def newton(equation, initial_guess, precision):
+  x0 = initial_guess
+  iterations = 0
+  while True:
+      f_x0 = equation.subs(x, x0)
+      f_prime_x0 = sp.diff(equation, x).subs(x, x0)
+      x1 = x0 - f_x0 / f_prime_x0
+      if abs(x1 - x0) < precision:
+          return x1, iterations
+      x0 = x1
+      iterations += 1
+
+print("\033[35m-=\033[m"*16)
+print("Equação: x³ - 7x² + 14x - 6 = 0")
+print("\033[35m-=\033[m"*16)
+print('\nUtilize "." (ponto) para separar as casas decimais')
+precision = float(input("Digite a precisão desejada: "))
+
+# Resolvendo com o Método da Bissecção
+a, b = 0, 5 
+bissecao_result, bissecao_iterations = bissecao(equation, a, b, precision)
+
+# Resolvendo com o Método de Newton
+initial_guess = (a + b) / 2  
+newton_result, newton_iterations = newton(equation, initial_guess, precision)
+
+
+result_color = "\033[92m"  # Verde
+reset_color = "\033[0m"
+
+
+print(f"\n\033[92mResultados:\033[0m\n")
+
+
+print(f"Método da \033[31mBissecção:\033[m")
+print(f"Resultado Final: {bissecao_result:.6f}")
+print(f"Iterações Necessárias: {bissecao_iterations}\n")
+
+print(f"Método de \033[34mNewton:\033[m")
+print(f"Resultado Final: {newton_result:.5f}")
+print(f"Iterações Necessárias: {newton_iterations}\n")
